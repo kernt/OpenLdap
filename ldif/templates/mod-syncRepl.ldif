@@ -1,0 +1,10 @@
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001 provider=ldap://ldap-node1.example.com binddn="cn=admin,cn=config" bindmethod=simple credentials=test searchbase="cn=config" type=refreshAndPersist retry="5 5 300 5" timeout=1 starttls=critical tls_reqcert=demand
+olcSyncRepl: rid=002 provider=ldap://ldap-node2.example.com binddn="cn=admin,cn=config" bindmethod=simple credentials=test searchbase="cn=config" type=refreshAndPersist retry="5 5 300 5" timeout=1 starttls=critical tls_reqcert=demand
+
+add: olcMirrorMode
+olcMirrorMode: TRUE
+
+

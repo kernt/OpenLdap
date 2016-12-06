@@ -1,0 +1,2 @@
+#!/bin/bash
+ldapadd -x -W -D 'cn=Manger,dc=example,dc=com' -h localhost -p 389 -f hosts.ldif

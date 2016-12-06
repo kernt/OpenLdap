@@ -1,0 +1,19 @@
+dn: olcOverlay={0}chain,olcDatabase={-1}frontend,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcChainConfig
+olcOverlay: {1}chain
+
+dn: olcDatabase=ldap,olcOverlay={1}chain,olcDatabase={-1}frontend,cn=config
+changetype: add
+objectClass: olcLDAPConfig
+objectClass: olcChainDatabase
+olcDBURI: ldap://ldap-node1.example.com:389/
+olcDbRebindAsUser: TRUE
+olcDbIDAssertBind: bindmethod=simple
+  binddn="cn=,ou=system,dc=example,dc=com"
+  credentials=
+  mode=self
+olcDbRebindAsUser: TRUE
+olcDbReturnError: TRUE
+

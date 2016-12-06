@@ -1,0 +1,11 @@
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+replace: olcSyncrepl
+olcSyncrepl: {0}rid=1 provider="ldap://ldap-node1.example.com/" searchbase="cn
+ =config" type="refreshAndPersist" retry="20 +" starttls=critical tls_reqcert=
+ try bindmethod="simple" binddn="uid=syncrepl,ou=system,dc=example,dc=com" cre
+ dentials="B1lovesOSS"
+olcSyncrepl: {1}rid=2 provider="ldap://ldap-node2.example.com/" searchbase="cn
+ =config" type="refreshAndPersist" retry="20 +" starttls=yes tls_reqcert=criti
+ cal bindmethod="simple" binddn="uid=syncrepl,ou=system,dc=example,dc=com" cre
+ dentials="B1lovesOSS"

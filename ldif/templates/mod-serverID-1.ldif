@@ -1,0 +1,9 @@
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcSyncrepl
+{0}rid=1 provider="ldap://ldap-node1.example.com/" searchbase="
+ dc=example,dc=com" type="refreshAndPersist" retry="20 +" starttls=critical
+  tls_reqcert=try bindmethod="simple" binddn="uid=syncrepl,ou=system,dc=e
+ xample,dc=com" credentials="B1lovesOSS"
+ 
+

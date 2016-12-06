@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ldapadd -D "cn=Manager,dc=example,dc=org" -W -f user_joe.ldif

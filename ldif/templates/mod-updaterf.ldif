@@ -1,0 +1,5 @@
+dn: cn=config
+changetype: modify
+add: olcReferral
+olcReferral: "ldap://ldap-node1.example.com"
+

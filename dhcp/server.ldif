@@ -1,0 +1,13 @@
+# You must specify the server's host name in LDAP that you are going to run
+# DHCP on and point it to which config tree you want to use. Whenever DHCP 
+# first starts up, it will do a search for this entry to find out which 
+# config to use.
+#
+# Note: We really want the hostname only, not the FQDN.
+dn: cn=rp4,dc=example,dc=de
+cn: rp4
+objectClass: top
+objectClass: dhcpServer
+dhcpServiceDN: cn=dhcp,dc=example,dc=de
+
+

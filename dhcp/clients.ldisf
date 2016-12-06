@@ -1,0 +1,121 @@
+dn: cn=technocore,cn=group-192.168.4.1,cn=dhcp,dc=example,dc=de
+cn: technocore
+objectClass: top
+objectClass: dhcpHost
+#dhcpHWAddress: ethernet ??:??:??:??:??:??
+dhcpStatements: fixed-address 192.168.4.1
+
+dn: cn=mirkwood,cn=group-192.168.4.1,cn=dhcp,dc=example,dc=de
+cn: mirkwood
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:c0:26:60:01:a1
+dhcpStatements: fixed-address 192.168.4.2
+
+dn: cn=isengard,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: isengard
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:05:02:71:ec:ab
+dhcpStatements: fixed-address 192.168.4.3
+
+dn: cn=moria,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: moria
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:30:65:ef:74:8e
+dhcpStatements: fixed-address 192.168.4.4
+
+# 192.168.4.5 = imladris.lan.example.de
+
+# 192.168.4.6 = osgiliath.lan.example.de
+
+dn: cn=fornost,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: fornost
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:00:e8:88:ab:80
+dhcpStatements: fixed-address 192.168.4.7
+
+dn: cn=tharbad,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: tharbad
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:0d:93:b1:eb:c2
+dhcpStatements: fixed-address 192.168.4.8
+
+dn: cn=nargothrond,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: nargothrond
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:17:f2:cd:5d:09
+dhcpStatements: fixed-address 192.168.4.9
+
+dn: cn=nindalf,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: nindalf
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 10:9a:dd:5d:bb:eb
+dhcpStatements: fixed-address 192.168.4.10
+
+# 192.168.4.11 = pelargir.lan.example.de
+
+dn: cn=laserjet1300n,cn=group-192.168.4.0,cn=dhcp,dc=example,dc=de
+cn: laserjet1300n
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:30:6e:d0:e4:20
+dhcpStatements: fixed-address 192.168.4.126
+
+# 192.168.2.1 = osgiliath.wifi.example.de
+
+dn: cn=landroval,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: landroval
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:25:00:fe:f4:e3
+dhcpStatements: fixed-address 192.168.2.2
+
+dn: cn=nargothrond,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: nargothrond
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:19:e3:08:00:a5
+dhcpStatements: fixed-address 192.168.2.3
+
+dn: cn=buschtrommel,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: buschtrommel
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 00:26:4a:f3:8d:2f
+dhcpStatements: fixed-address 192.168.2.4
+
+dn: cn=bundeslade,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: bundeslade
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet d8:a2:5e:07:b7:7d
+dhcpStatements: fixed-address 192.168.2.5
+
+# 192.168.2.6 = pelargir.wifi.example.de
+
+dn: cn=nindalf,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: nindalf
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet c8:bc:c8:f1:77:61
+dhcpStatements: fixed-address 192.168.2.7
+
+dn: cn=ihoernchen,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: ihoernchen
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet c8:bc:c8:f1:77:61
+dhcpStatements: fixed-address 192.168.2.8
+
+dn: cn=wundertuete,cn=group-192.168.2.0,cn=dhcp,dc=example,dc=de
+cn: wundertuete
+objectClass: top
+objectClass: dhcpHost
+dhcpHWAddress: ethernet 04:54:53:28:aa:9f
+dhcpStatements: fixed-address 192.168.2.9

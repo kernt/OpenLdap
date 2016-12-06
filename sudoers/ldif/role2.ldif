@@ -1,0 +1,13 @@
+# LDAP equivalent of puddles
+# Notice that even though ALL comes last, it still behaves like
+# role1 since the LDAP code assumes the more paranoid configuration
+dn: cn=role2,ou=Sudoers,dc=my-domain,dc=com
+objectClass: sudoRole
+objectClass: top
+cn: role2
+sudoUser: puddles
+sudoHost: ALL
+sudoCommand: !/bin/sh
+sudoCommand: ALL
+
+

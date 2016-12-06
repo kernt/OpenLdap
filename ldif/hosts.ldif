@@ -1,0 +1,32 @@
+dn: ou=Hosts,dc=example,dc=com                                                                                              
+objectClass: organizationalUnit                                                                                             
+objectClass: top                                                                                                            
+ou: Hosts
+
+dn: cn=gojira+ipHostNumber=192.168.1.1,ou=Hosts,dc=example,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: gojira
+ipHostNumber: 192.168.1.1
+
+dn: cn=gamera+ipHostNumber=192.168.1.50,ou=Hosts,dc=example,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: gamera
+ipHostNumber: 192.168.1.50
+
+dn: cn=iris+ipHostNumber=192.168.1.51,ou=Hosts,dc=example,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: iris
+ipHostNumber: 192.168.1.51
+
+dn: cn=zedan+ipHostNumber=192.168.1.52,ou=Hosts,dc=example,dc=com
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: zedan
+ipHostNumber: 192.168.1.52

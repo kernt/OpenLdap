@@ -1,0 +1,24 @@
+dn: uid=johndoe,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: johndoe
+cn: John Doe
+sn: Doe
+givenName: John
+title: Guinea Pig
+telephoneNumber: +0 000 000 0000
+mobile: +0 000 000 0000
+postalAddress: AddressLine1$AddressLine2$AddressLine3
+userPassword: {CRYPT}xxxxxxxxxx
+labeledURI: https://oshsl.org/
+loginShell: /bin/bash
+uidNumber: 9999
+gidNumber: 9999
+homeDirectory: /home/johndoe/
+description: This is an example user
+
+

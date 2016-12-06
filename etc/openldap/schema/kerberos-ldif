@@ -1,0 +1,201 @@
+# kerberos, schema, config
+dn: cn=kerberos,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: kerberos
+olcAttributeTypes:: ezB9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS40LjEuMSAgICAgICAgIC
+ AgICAgIE5BTUUgJ2tyYlByaW5jaXBhbE5hbWUnICAgICAgICAgICAgICAgRVFVQUxJVFkgY2FzZUV
+ 4YWN0SUE1TWF0Y2ggCVNVQlNUUiBjYXNlRXhhY3RTdWJzdHJpbmdzTWF0Y2ggICAgICAgICAgICAg
+ ICBTWU5UQVggMS4zLjYuMS40LjEuMTQ2Ni4xMTUuMTIxLjEuMjYp
+olcAttributeTypes: {1}( 1.2.840.113554.1.4.1.6.1               NAME 'krbCanoni
+ calName'               EQUALITY caseExactIA5Match               SUBSTR caseEx
+ actSubstringsMatch               SYNTAX 1.3.6.1.4.1.1466.115.121.1.26        
+        SINGLE-VALUE)
+olcAttributeTypes: {2}( 2.16.840.1.113719.1.301.4.3.1               NAME 'krbP
+ rincipalType'               EQUALITY integerMatch               SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {3}( 2.16.840.1.113719.1.301.4.5.1               NAME 'krbU
+ PEnabled'               DESC 'Boolean'               SYNTAX 1.3.6.1.4.1.1466.
+ 115.121.1.7               SINGLE-VALUE)
+olcAttributeTypes: {4}( 2.16.840.1.113719.1.301.4.6.1               NAME 'krbP
+ rincipalExpiration'               EQUALITY generalizedTimeMatch              
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {5}( 2.16.840.1.113719.1.301.4.8.1               NAME 'krbT
+ icketFlags'               EQUALITY integerMatch               SYNTAX 1.3.6.1.
+ 4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {6}( 2.16.840.1.113719.1.301.4.9.1               NAME 'krbM
+ axTicketLife'               EQUALITY integerMatch               SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {7}( 2.16.840.1.113719.1.301.4.10.1               NAME 'krb
+ MaxRenewableAge'               EQUALITY integerMatch               SYNTAX 1.3
+ .6.1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {8}( 2.16.840.1.113719.1.301.4.14.1               NAME 'krb
+ RealmReferences'               EQUALITY distinguishedNameMatch               
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {9}( 2.16.840.1.113719.1.301.4.15.1               NAME 'krb
+ LdapServers'               EQUALITY caseIgnoreMatch               SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.15)
+olcAttributeTypes: {10}( 2.16.840.1.113719.1.301.4.17.1               NAME 'kr
+ bKdcServers'               EQUALITY distinguishedNameMatch               SYNT
+ AX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {11}( 2.16.840.1.113719.1.301.4.18.1               NAME 'kr
+ bPwdServers'               EQUALITY distinguishedNameMatch               SYNT
+ AX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {12}( 2.16.840.1.113719.1.301.4.24.1               NAME 'kr
+ bHostServer'               EQUALITY caseExactIA5Match               SYNTAX 1.
+ 3.6.1.4.1.1466.115.121.1.26)
+olcAttributeTypes: {13}( 2.16.840.1.113719.1.301.4.25.1               NAME 'kr
+ bSearchScope'               EQUALITY integerMatch               SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {14}( 2.16.840.1.113719.1.301.4.26.1               NAME 'kr
+ bPrincipalReferences'               EQUALITY distinguishedNameMatch          
+      SYNTAX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {15}( 2.16.840.1.113719.1.301.4.28.1               NAME 'kr
+ bPrincNamingAttr'               EQUALITY caseIgnoreMatch               SYNTAX
+  1.3.6.1.4.1.1466.115.121.1.15               SINGLE-VALUE)
+olcAttributeTypes: {16}( 2.16.840.1.113719.1.301.4.29.1               NAME 'kr
+ bAdmServers'               EQUALITY distinguishedNameMatch               SYNT
+ AX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {17}( 2.16.840.1.113719.1.301.4.30.1               NAME 'kr
+ bMaxPwdLife'               EQUALITY integerMatch               SYNTAX 1.3.6.1
+ .4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {18}( 2.16.840.1.113719.1.301.4.31.1               NAME 'kr
+ bMinPwdLife'               EQUALITY integerMatch               SYNTAX 1.3.6.1
+ .4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {19}( 2.16.840.1.113719.1.301.4.32.1               NAME 'kr
+ bPwdMinDiffChars'                EQUALITY integerMatch               SYNTAX 1
+ .3.6.1.4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {20}( 2.16.840.1.113719.1.301.4.33.1               NAME 'kr
+ bPwdMinLength'                EQUALITY integerMatch               SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {21}( 2.16.840.1.113719.1.301.4.34.1               NAME 'kr
+ bPwdHistoryLength'                EQUALITY integerMatch               SYNTAX 
+ 1.3.6.1.4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {22}( 1.3.6.1.4.1.5322.21.2.1               NAME 'krbPwdMax
+ Failure'                EQUALITY integerMatch               SYNTAX 1.3.6.1.4.
+ 1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {23}( 1.3.6.1.4.1.5322.21.2.2               NAME 'krbPwdFai
+ lureCountInterval'                EQUALITY integerMatch               SYNTAX 
+ 1.3.6.1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {24}( 1.3.6.1.4.1.5322.21.2.3               NAME 'krbPwdLoc
+ koutDuration'                EQUALITY integerMatch               SYNTAX 1.3.6
+ .1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {25}( 1.2.840.113554.1.4.1.6.2               NAME 'krbPwdAt
+ tributes'               EQUALITY integerMatch               SYNTAX 1.3.6.1.4.
+ 1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {26}( 1.2.840.113554.1.4.1.6.3               NAME 'krbPwdMa
+ xLife'               EQUALITY integerMatch               SYNTAX 1.3.6.1.4.1.1
+ 466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {27}( 1.2.840.113554.1.4.1.6.4               NAME 'krbPwdMa
+ xRenewableLife'               EQUALITY integerMatch               SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.27               SINGLE-VALUE)
+olcAttributeTypes: {28}( 1.2.840.113554.1.4.1.6.5               NAME 'krbPwdAl
+ lowedKeysalts'               EQUALITY caseIgnoreIA5Match               SYNTAX
+  1.3.6.1.4.1.1466.115.121.1.26               SINGLE-VALUE)
+olcAttributeTypes: {29}( 2.16.840.1.113719.1.301.4.36.1               NAME 'kr
+ bPwdPolicyReference'               EQUALITY distinguishedNameMatch           
+     SYNTAX 1.3.6.1.4.1.1466.115.121.1.12               SINGLE-VALUE)
+olcAttributeTypes: {30}( 2.16.840.1.113719.1.301.4.37.1               NAME 'kr
+ bPasswordExpiration'               EQUALITY generalizedTimeMatch             
+   SYNTAX 1.3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {31}( 2.16.840.1.113719.1.301.4.39.1               NAME 'kr
+ bPrincipalKey'               EQUALITY octetStringMatch               SYNTAX 1
+ .3.6.1.4.1.1466.115.121.1.40)
+olcAttributeTypes: {32}( 2.16.840.1.113719.1.301.4.40.1               NAME 'kr
+ bTicketPolicyReference'               EQUALITY distinguishedNameMatch        
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12               SINGLE-VALUE)
+olcAttributeTypes: {33}( 2.16.840.1.113719.1.301.4.41.1               NAME 'kr
+ bSubTrees'               EQUALITY distinguishedNameMatch               SYNTAX
+  1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {34}( 2.16.840.1.113719.1.301.4.42.1               NAME 'kr
+ bDefaultEncSaltTypes'               EQUALITY caseIgnoreMatch               SY
+ NTAX 1.3.6.1.4.1.1466.115.121.1.15)
+olcAttributeTypes: {35}( 2.16.840.1.113719.1.301.4.43.1               NAME 'kr
+ bSupportedEncSaltTypes'               EQUALITY caseIgnoreMatch               
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15)
+olcAttributeTypes: {36}( 2.16.840.1.113719.1.301.4.44.1               NAME 'kr
+ bPwdHistory'               EQUALITY octetStringMatch               SYNTAX 1.3
+ .6.1.4.1.1466.115.121.1.40)
+olcAttributeTypes: {37}( 2.16.840.1.113719.1.301.4.45.1               NAME 'kr
+ bLastPwdChange'               EQUALITY generalizedTimeMatch               SYN
+ TAX 1.3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {38}( 1.3.6.1.4.1.5322.21.2.5               NAME 'krbLastAd
+ minUnlock'               EQUALITY generalizedTimeMatch               SYNTAX 1
+ .3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {39}( 2.16.840.1.113719.1.301.4.46.1               NAME 'kr
+ bMKey'               EQUALITY octetStringMatch               SYNTAX 1.3.6.1.4
+ .1.1466.115.121.1.40)
+olcAttributeTypes: {40}( 2.16.840.1.113719.1.301.4.47.1               NAME 'kr
+ bPrincipalAliases'               EQUALITY caseExactIA5Match               SYN
+ TAX 1.3.6.1.4.1.1466.115.121.1.26)
+olcAttributeTypes: {41}( 2.16.840.1.113719.1.301.4.48.1               NAME 'kr
+ bLastSuccessfulAuth'               EQUALITY generalizedTimeMatch             
+   SYNTAX 1.3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {42}( 2.16.840.1.113719.1.301.4.49.1               NAME 'kr
+ bLastFailedAuth'               EQUALITY generalizedTimeMatch               SY
+ NTAX 1.3.6.1.4.1.1466.115.121.1.24               SINGLE-VALUE)
+olcAttributeTypes: {43}( 2.16.840.1.113719.1.301.4.50.1               NAME 'kr
+ bLoginFailedCount'                EQUALITY integerMatch               SYNTAX 
+ 1.3.6.1.4.1.1466.115.121.1.27                SINGLE-VALUE)
+olcAttributeTypes: {44}( 2.16.840.1.113719.1.301.4.51.1               NAME 'kr
+ bExtraData'               EQUALITY octetStringMatch               SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.40)
+olcAttributeTypes: {45}( 2.16.840.1.113719.1.301.4.52.1               NAME 'kr
+ bObjectReferences'               EQUALITY distinguishedNameMatch             
+   SYNTAX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {46}( 2.16.840.1.113719.1.301.4.53.1               NAME 'kr
+ bPrincContainerRef'               EQUALITY distinguishedNameMatch            
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.12)
+olcAttributeTypes: {47}( 1.3.6.1.4.1.5322.21.2.4               NAME 'krbAllowe
+ dToDelegateTo'               EQUALITY caseExactIA5Match               SUBSTR 
+ caseExactSubstringsMatch               SYNTAX 1.3.6.1.4.1.1466.115.121.1.26)
+olcObjectClasses:: ezB9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjEuMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYkNvbnRhaW5lcicgICAgICAgICAgICAgICBTVVAgdG9wIAlTVFJVQ1RVUkFM
+ ICAgICAgICAgICAgICAgTVVTVCAoIGNuICkgKQ==
+olcObjectClasses:: ezF9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjIuMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYlJlYWxtQ29udGFpbmVyJyAgICAgICAgICAgICAgIFNVUCB0b3AgCVNUUlVD
+ VFVSQUwgICAgICAgICAgICAgICBNVVNUICggY24gKSAgICAgICAgICAgICAgIE1BWSAoIGtyYk1LZ
+ XkgJCBrcmJVUEVuYWJsZWQgJCBrcmJTdWJUcmVlcyAkIGtyYlNlYXJjaFNjb3BlICQga3JiTGRhcF
+ NlcnZlcnMgJCBrcmJTdXBwb3J0ZWRFbmNTYWx0VHlwZXMgJCBrcmJEZWZhdWx0RW5jU2FsdFR5cGV
+ zICQga3JiVGlja2V0UG9saWN5UmVmZXJlbmNlICQga3JiS2RjU2VydmVycyAkIGtyYlB3ZFNlcnZl
+ cnMgJCBrcmJBZG1TZXJ2ZXJzICQga3JiUHJpbmNOYW1pbmdBdHRyICQga3JiUHdkUG9saWN5UmVmZ
+ XJlbmNlICQga3JiUHJpbmNDb250YWluZXJSZWYgKSAp
+olcObjectClasses: {2}( 2.16.840.1.113719.1.301.6.3.1               NAME 'krbSe
+ rvice'               SUP top               ABSTRACT               MUST ( cn )
+                MAY ( krbHostServer $ krbRealmReferences ) )
+olcObjectClasses:: ezN9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjQuMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYktkY1NlcnZpY2UnICAgICAgICAgICAgICAgU1VQIGtyYlNlcnZpY2UgCVNU
+ UlVDVFVSQUwgKQ==
+olcObjectClasses:: ezR9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjUuMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYlB3ZFNlcnZpY2UnICAgICAgICAgICAgICAgU1VQIGtyYlNlcnZpY2UgCVNU
+ UlVDVFVSQUwgKQ==
+olcObjectClasses:: ezV9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjguMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYlByaW5jaXBhbEF1eCcgCVNVUCB0b3AgICAgICAgICAgICAgICBBVVhJTElB
+ UlkgICAgICAgICAgICAgICBNQVkgKCBrcmJQcmluY2lwYWxOYW1lICQga3JiQ2Fub25pY2FsTmFtZ
+ SAkIGtyYlVQRW5hYmxlZCAkIGtyYlByaW5jaXBhbEtleSAkIGtyYlRpY2tldFBvbGljeVJlZmVyZW
+ 5jZSAkIGtyYlByaW5jaXBhbEV4cGlyYXRpb24gJCBrcmJQYXNzd29yZEV4cGlyYXRpb24gJCBrcmJ
+ Qd2RQb2xpY3lSZWZlcmVuY2UgJCBrcmJQcmluY2lwYWxUeXBlICQga3JiUHdkSGlzdG9yeSAkIGty
+ Ykxhc3RQd2RDaGFuZ2UgJCBrcmJMYXN0QWRtaW5VbmxvY2sgJCBrcmJQcmluY2lwYWxBbGlhc2VzI
+ CQga3JiTGFzdFN1Y2Nlc3NmdWxBdXRoICQga3JiTGFzdEZhaWxlZEF1dGggJCBrcmJMb2dpbkZhaW
+ xlZENvdW50ICQga3JiRXh0cmFEYXRhICQga3JiQWxsb3dlZFRvRGVsZWdhdGVUbyApICk=
+olcObjectClasses:: ezZ9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjkuMSAgICAgICAgICA
+ gICAgIE5BTUUgJ2tyYlByaW5jaXBhbCcgICAgICAgICAgICAgICBTVVAgdG9wICAgICAgICAgICAg
+ ICAgTVVTVCAoIGtyYlByaW5jaXBhbE5hbWUgKSAJTUFZICgga3JiT2JqZWN0UmVmZXJlbmNlcyApI
+ Ck=
+olcObjectClasses: {7}( 2.16.840.1.113719.1.301.6.11.1               NAME 'krbP
+ rincRefAux'               SUP top               AUXILIARY               MAY k
+ rbPrincipalReferences )
+olcObjectClasses:: ezh9KCAyLjE2Ljg0MC4xLjExMzcxOS4xLjMwMS42LjEzLjEgICAgICAgICA
+ gICAgICBOQU1FICdrcmJBZG1TZXJ2aWNlJyAgICAgICAgICAgICAgIFNVUCBrcmJTZXJ2aWNlICAJ
+ U1RSVUNUVVJBTCAp
+olcObjectClasses: {9}( 2.16.840.1.113719.1.301.6.14.1               NAME 'krbP
+ wdPolicy'                SUP top               MUST ( cn )               MAY 
+ ( krbMaxPwdLife $ krbMinPwdLife $ krbPwdMinDiffChars $ krbPwdMinLength $ krbP
+ wdHistoryLength $ krbPwdMaxFailure $ krbPwdFailureCountInterval $ krbPwdLocko
+ utDuration $ krbPwdAttributes $ krbPwdMaxLife $ krbPwdMaxRenewableLife $ krbP
+ wdAllowedKeysalts ) )
+olcObjectClasses: {10}( 2.16.840.1.113719.1.301.6.16.1               NAME 'krb
+ TicketPolicyAux'               SUP top               AUXILIARY               
+ MAY ( krbTicketFlags $ krbMaxTicketLife $ krbMaxRenewableAge ) )
+olcObjectClasses: {11}( 2.16.840.1.113719.1.301.6.17.1               NAME 'krb
+ TicketPolicy'               SUP top               MUST ( cn ) )
+

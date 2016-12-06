@@ -1,0 +1,12 @@
+# LDAP equivalent of johnny
+# Allows all commands except shell
+dn: cn=role1,ou=Sudoers,dc=my-domain,dc=com
+objectClass: sudoRole
+objectClass: top
+cn: role1
+sudoUser: johnny
+sudoHost: ALL
+sudoCommand: ALL
+sudoCommand: !/bin/sh
+
+

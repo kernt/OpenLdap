@@ -1,0 +1,6 @@
+#Quelle http://www.rexconsulting.net/ldap-protocol-uidnumber.html
+
+objectclass ( 1.3.6.1.4.1.19173.2.2.2.8
+  NAME 'uidNext'
+  DESC 'Where we get the next uidNumber from'
+  MUST ( cn $ uidNumber ) )

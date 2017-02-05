@@ -1,0 +1,16 @@
+dn: dc=testcorp,dc=com
+objectClass: top
+objectClass: organization
+objectClass: dcObject
+dc: testcorp
+o: Test Corp, Inc.
+
+dn: ou=People,dc=testcorp,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=testcorp,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups

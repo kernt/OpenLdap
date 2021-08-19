@@ -1,31 +1,39 @@
-OpenLdap
-========
+# OpenLdap
 
-### ads-and-openldap
+## ads-and-openldap
+
 ADS Proxy with OpenLDAP 
 
-### dhcp
+## dhcp
+
 DHCP with openldap 
 
-### dns/ldif 
+## dns/ldif 
+
 DNS with openldap 
 
-### etc
+## etc
+
 All files will be placed in /etc/ on your Linux.
 
-### ldif
+## ldif
+
 Ldif tools and files 
 
-### scripts
+## scripts
+
 Some helpfull scripts  for oparations
 
-### server/examples
+## server/examples
+
 Installing Server examples
 
-### sudoers 
+## sudoers 
+
 Use sudo with openldap
 
 
-Sources for schema files
-========================
-* https://github.com/NETWAYS/lconf/blob/master/src/netways.schema.in
+##### Sources
+
+* [tool-usages ldapsearch](https://docs.ldap.com/ldap-sdk/docs/tool-usages/ldapsearch.html)
+
